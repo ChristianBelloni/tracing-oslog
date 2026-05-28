@@ -146,7 +146,7 @@ where
 		let mut attr_visitor = FieldVisitor::new(&mut attributes);
 		event.record(&mut attr_visitor);
 		let mut message = String::new();
-		message = format!("{}  ", metadata.target())
+		message = format!("{}  ", metadata.target());
 		if let Some(value) = attributes.remove("message") {
 			message = value;
 			message.push_str("  ");
